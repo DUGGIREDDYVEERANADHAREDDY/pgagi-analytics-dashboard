@@ -6,6 +6,11 @@
 -username :-PGAGI.
 -Password:-Go4Lunch@13_00.
 
+### Scripts is not avalible you can  use this command and download the scripts
+->npm install --legacy-peer-deps
+## to start the project 
+-> npm start
+
 
 
 
