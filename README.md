@@ -3,8 +3,8 @@
 --> noo need to use the extenal api here i am integreated all apis to fetch the real time data 
 
 ## Login details 
-->username :-PGAGI
-->Password:-Go4Lunch@13_00
+-username :-PGAGI.
+-Password:-Go4Lunch@13_00.
 
 
 
