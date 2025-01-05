@@ -1,4 +1,13 @@
-## kartheek_s_application1
+## Veeranadha Reddy
+###  API integration 
+--> noo need to use the extenal api here i am integreated all apis to fetch the real time data 
+
+## Login details 
+#username :-PGAGI
+#Password:-Go4Lunch@13_00
+
+
+
 
 Generated with ❤️ from [DhiWise](https://www.dhiwise.com)
 
