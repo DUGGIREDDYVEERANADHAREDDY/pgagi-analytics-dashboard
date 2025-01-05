@@ -1,0 +1,75 @@
+{
+  "name": "kartheeks-application-1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@dhiwise/react-switch": "^1.0.2",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.2.0",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf/renderer": "^4.1.5",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tanstack/react-table": "^8.5.30",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.7",
+    "express": "^4.21.2",
+    "framer-motion": "^11.15.0",
+    "helmet": "^8.0.0",
+    "icons": "^1.0.0",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
+    "pdfjs-dist": "^4.9.155",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^4.25.0",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.3.0",
+    "react-loading-indicators": "^1.0.0",
+    "react-pro-sidebar": "^1.0.0",
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.0.2",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "^5.0.0",
+    "react-select": "^5.2.1",
+    "recharts": "^2.15.0",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.2",
+    "postcss": "8.4.8",
+    "tailwindcss": "3.4.6"
+  }
+}

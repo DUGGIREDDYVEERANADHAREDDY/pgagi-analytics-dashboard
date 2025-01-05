@@ -1,0 +1,860 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: SF Pro;
+    overflow: hidden;
+    background-color:#f5f6fa;
+}
+
+.content {
+  width: 90%; /* Responsive width */
+  max-width: 1200px; /* Max width for larger screens */
+  padding: 20px;
+  background-color: white; /* White background for content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for some depth */
+  border-radius: 8px; /* Rounded corners */
+}
+@media (max-width: 768px) {
+  .content {
+      width: 95%; /* Reduce width on smaller screens */
+  }
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    line-height: normal;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+input {
+    box-shadow: none;
+    outline: none;
+    border: none;
+    /*background-color: transparent;
+    width: 100%;*/
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    box-shadow: none;
+    /* border: none;*/
+    /*-webkit-appearance: none; /* Removes any default styling in Webkit browsers */
+}
+
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #d9d9d9 !important;
+    /*-webkit-focus-ring-color: gray !important; /* Removes focus ring in Webkit browsers */
+
+}
+
+
+.tablecontainer
+tbody td:first-child {
+    padding-left: 22px;
+}
+
+.tablecontainer tbody td:last-child {
+    padding-right: 22px;
+}
+
+
+table {
+    table-layout: fixed;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #6b6b6b;
+    border-radius: 10px;
+}
+.ps-menu-icon {
+    width: unset !important;
+    min-width: unset !important;
+    justify-content: start !important;
+    margin: 0 !important;
+}
+.ps-menu-button,
+.ps-menu-icon {
+    height: unset !important;
+}
+.ps-menu-button:hover {
+    background-color: unset !important;
+}
+.ps-sidebar-container,
+.ps-submenu-content {
+    background-color: transparent !important;
+    overflow: unset;
+}
+.ps-collapsed .ps-menu-icon {
+    min-width: 100% !important;
+    justify-content: center !important;
+}
+.ps-collapsed {
+    width: 80px !important;
+}
+.ps-sidebar-container,
+.ps-menu-root,
+.ps-menu-root > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ps-sidebar-root {
+    min-width: unset !important;
+}
+.ps-collapsed,
+.ps-collapsed .ps-menu-root,
+.ps-collapsed .ps-menu-button {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+.ps-collapsed ul {
+    align-items: center;
+}
+.ps-menu-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ps-sidebar-container::-webkit-scrollbar {
+    width: 2px;
+}
+
+
+
+container{
+    display: inline-block;
+    font-family: "arial";
+    font-size: 24px;
+}
+
+.typed {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 2.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+
+/*paragraph*/
+category-instruction-label {
+  width: 100%; /* Ensure it takes up the full width of its container */
+  max-width: 600px; /* Constrain to the same width as the other elements */
+  word-wrap: break-word; /* This ensures the text wraps within the container */
+  margin-bottom: 10px; /* Add some spacing between the label and the category section */
+  font-size: 14px; /* Adjust the font size for better readability */
+  color: #4A4A4A; /* Optional: Set the color to match the design */
+  line-height: 1.6; /* Optional: Set line height for better readability */
+}
+
+/*ADMINDASH BOARD DESING FROM HERE */
+/* Sidebar  */
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width:350px;
+    background-color: white;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+
+  .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 0px 30px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar-title > span {
+    display: none;
+  }
+
+  .sidebar-brand {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .sidebar-list {
+  padding-right: 100px;
+   list-style-type: none;
+  }
+
+  .sidebar-list-item {
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
+  }
+
+  .sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+
+  .sidebar-list-item > a {
+    text-decoration: none;
+    color: #9e9ea4;
+  }
+
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+
+  /* End Sidebar  */
+
+  /* Main  */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 15px 0;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+
+  .card:first-child {
+    background-color: #2962ff;
+  }
+
+  .card:nth-child(2) {
+    background-color: #ff6d00;
+  }
+
+  .card:nth-child(3) {
+    background-color: #2e7d32;
+  }
+
+  .card:nth-child(4) {
+    background-color: #d50000;
+  }
+
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-inner > .card_icon {
+    font-size: 25px;
+  }
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 60px;
+    height: 300px;
+  }
+
+  /* End Main  */
+  /* ICON*/
+  .icon {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 20px;
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 26px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+  }
+  /*End icon  */
+
+/* Medium <= 992px */
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        'header'
+        'main';
+    }
+
+    #sidebar {
+      display: none;
+    }
+
+    .menu-icon {
+      display: inline;
+    }
+
+    .sidebar-title > span {
+      display: inline;
+    }
+  }
+  /* Small <= 768px */
+  @media screen and (max-width: 768px) {
+    .main-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    .charts {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+  }
+
+  /* Extra Small <= 576px */
+  @media screen and (max-width: 576px) {
+    .hedaer-left {
+      display: none;
+    }
+  }
+
+
+.text-wrap {
+  word-wrap: break-word; /* Breaks long words to fit within the container */
+  overflow-wrap: break-word; /* Ensures words break when too long */
+}
+
+
+
+
+
+
+/*@  to ensure that the */
+/* Move the selected item to the left */
+.move-left {
+  transform: translateX(-100%); /* Adjust this value based on your layout */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/*@return DashBoard css */
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.dashboard-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+h3 {
+  color: #555;
+}
+
+.date-filter {
+  margin: 20px 0;
+}
+
+input[type="date"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+
+.dashboard-section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.dashboard-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-stats, .other-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.order-stat, .other-stat {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+}
+
+.order-stat h3, .other-stat h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+.order-stat p, .other-stat p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Add green background to the last section */
+.dashboard-section:last-child {
+  background-color: green;
+  color: white;
+}
+
+.dashboard-section:last-child h2 {
+  color: white;
+}
+
+
+.dashboard-section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.dashboard-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-stats, .other-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.order-stat, .other-stat {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.order-stat::after,
+.other-stat::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the strip */
+  border-radius: 0 0 8px 8px; /* Optional rounded corners at the bottom */
+}
+
+/* First div - red color */
+.first-div::after {
+  background-color: red;
+}
+
+/* Second div - orange color */
+.second-div::after {
+  background-color: orange;
+}
+
+/* Third div - green color */
+.third-div::after {
+  background-color: green;
+}
+
+
+/* Adjust the text styles */
+.order-stat h3, .other-stat h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.order-stat p, .other-stat p {
+  font-size: 20px;
+  font-weight: bold;
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+.loading {
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+
+/* Optionally: style the last section with a different color */
+.dashboard-section:last-child {
+  background-color: green;
+  color: white;
+}
+
+.dashboard-section:last-child h2 {
+  color: white;
+}
+
+
+.revenue-chart, .orders-chart {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 48%; /* Ensures both charts take up half the available width */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  position: relative;
+}
+
+ .orders-chart h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ .orders-chart p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+
+.revenue-chart {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add spacing between elements */
+}
+
+.revenue-chart p {
+  font-size: 20px;
+  margin: 0; /* Remove vertical margins for better alignment */
+}
+
+.revenue-chart h3 {
+  font-size: 20px;
+  margin: 0; /* Remove vertical margins for better alignment */
+}
+
+/* Optional: Adding green bottom for the charts as you mentioned earlier */
+.revenue-chart::after, .orders-chart::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the green strip */
+  background-color: green;
+  border-radius: 0 0 8px 8px;
+}
+
+.poll-chart-div {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.charts-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack sidebar and content */
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding-left: 0; /* No padding when sidebar is stacked */
+  }
+
+  .dashboard-section.mobile {
+    text-align: left;
+    padding: 10px;
+    margin: 10px auto;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .order-stats.mobile-order-stats {
+    display: block;
+  }
+
+  .order-stat {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .charts-section.mobile-charts-section {
+    display: block;
+  }
+
+  .chart-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .date-filter.mobile-date-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .date-filter input {
+    width: 100%;
+  }
+
+  .date-filter span {
+    display: none;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .dashboard-section.desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-stats {
+    display: flex;
+    gap: 20px;
+  }
+
+  .order-stat {
+    width: 23%;
+  }
+
+  .charts-section.desktop-charts-section {
+    display: flex;
+    gap: 20px;
+  }
+
+  .chart-card {
+    width: 45%;
+  }
+}
+
+
+/* Shared styles for both checkbox containers */
+.checkbox-container input[type="checkbox"],
+.checkbox-container1 input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+.checkbox-container span,
+.checkbox-container1 span {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked + span,
+.checkbox-container1 input[type="checkbox"]:checked + span {
+    padding: 5px;
+    color: white; /* Text color when checked */
+    border-radius: 5px;
+}
+
+/* Specific styles for each container */
+.checkbox-container input[type="checkbox"]:checked + span {
+    background-color: #4caf50; /* Green background when checked */
+}
+
+/*@return the value of an the SPinner in registerpage */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.checkbox-container1 input[type="checkbox"]:checked + span {
+    background-color: #944a28; /* Orange background when checked */
+}
+
+/*@return the value of an the SPinner in registerpage */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.spinner-image {
+  width: 100px; /* Adjust the size */
+  height: 100px; /* Adjust the size */
+  animation: spin 2s linear infinite; /* The spinning effect */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate to 360 degrees */
+  }
+}
+/*@return the div of  an the */
+
+
+.desktop-order-stats {
+  display: flex;
+  margin-top: 50px; /* Adjust this value to move it further down */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
